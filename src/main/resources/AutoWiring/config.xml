@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd ">
+
+    <!-- bean definitions here -->
+
+<!--    <bean class="org.autowiring.Class1" name="class2">-->
+<!--        <property name="street" value="EknathPuram"/>-->
+<!--        <property name="city" value="Amravati"/>-->
+<!--    </bean>-->
+    <bean class="org.autowiring.Class1" name="class1">
+        <property name="street" value="BITS"/>
+        <property name="city" value="Hyderabad"/>
+    </bean>
+    <!-- using Autowiring -->
+
+            <!--    First Method using byName  (checks by name of object and class  )-->
+<!--    <bean class="org.autowiring.Class2" name="obj1" autowire="byName"/>-->
+    <!--    Second Method using byName  (checks by type of object )-->
+<!--    <bean class="org.autowiring.Class2" name="obj2" autowire="byType">-->
+<!--        <property name="price" value="10.23" />-->
+<!--    </bean>-->
+
+<!--    Third Method using constructor -->
+    <bean class="org.autowiring.Class2" name="obj3" autowire="constructor">
+    <property name="price" value="123"/>
+    </bean>
+</beans>
